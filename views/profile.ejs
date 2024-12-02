@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="/images/logo.png" />
+    <link rel="stylesheet" href="/stylesheets/profile.css" />
+    <title>Profile</title>
+  </head>
+  <body>
+    <footer class="wrap">
+      <div class="footer-content">
+        <div>
+          <div class="logo">
+            <img src="/images/logo.png" width="150px" height="100px" />
+          </div>
+        </div>
+
+        <div class="lessons-div">
+          <div class="lessons">
+            <span class="lessons-title">
+              <img src="/images/webinar.png" width="18px" height="18px" />
+              Lessons
+            </span>
+            <div class="dropdown">
+              <div class="lesson-item"><a href="user/html-lesson">HTML</a></div>
+              <div class="lesson-item"><a href="user/css-lesson">CSS</a></div>
+              <div class="lesson-item">
+                <a href="user/js-lesson">JavaScript</a>
+              </div>
+              <div class="lesson-item">
+                <a href="user/node-lesson">Node.js</a>
+              </div>
+            </div>
+          </div>
+          <div class="menu-div">
+            <span class="menu-item">
+              <img src="/images/document-xxl.png" width="15px" height="15px" />
+              <a href="/web-quizz" class="menu-link">Certificate</a>
+            </span>
+
+            <span class="menu-item">
+              <img src="/images/settings.png" width="16px" height="16px" />
+              <a href="/settings" class="menu-link">Settings</a>
+            </span>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <br />
+    <div class="advertisement-div">
+      <div class="adv-div1">
+        <p class="adv-p1">
+          If You Want To Become a Programmer<br />
+          <span class="adv-span">Then Come To Us</span>
+        </p>
+        <p class="adv-p2">At CodeArt You Will Learn The Languages You Want</p>
+        <br />
+        <button class="btn signup"><a href="/register">Sign Up </a></button>
+      </div>
+
+      <div class="adv-div2">
+        <img
+          src="https://faheemonhub.github.io/Nexcent-Figma/assets/Illustration.svg"
+          alt="Sorry me working"
+        />
+      </div>
+    </div>
+
+    <div class="lessons-div">
+      <div class="html-div">
+        <img src="/images/html.png" width="100px" height="100px" alt="Html" />
+        <p>HTML Lessons</p>
+        <p>Bill Gates</p>
+        <button class="btn signup">
+          <a href="/html-lesson">HTML</a>
+        </button>
+      </div>
+      <div class="html-div">
+        <img src="/images/css.png" width="100px" height="100px" alt="CSS" />
+        <p>CSS Lessons</p>
+        <p>Wium Lie</p>
+        <button class="btn signup">
+          <a href="/css-lesson">CSS</a>
+        </button>
+      </div>
+      <div class="html-div">
+        <img
+          src="/images/free-icon-js.png"
+          width="100px"
+          height="100px"
+          alt="JS"
+        />
+        <p>Javascript Lessons</p>
+        <p>Mike Krieger</p>
+        <button class="btn signup">
+          <a href="/js-lesson">Javascript</a>
+        </button>
+      </div>
+      <div class="html-div">
+        <img src="/images/pngegg.png" width="100px" height="100px" alt="Node" />
+        <p>Node js Lessons</p>
+        <p>Mark Zuckerberg</p>
+        <button class="btn signup">
+          <a href="/node-lesson">Node js</a>
+        </button>
+      </div>
+    </div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script>
+  // Retrieve the token from local storage
+  const token = localStorage.getItem("token");
+  (async () => {
+    try {
+      const {data} = await axios.get("/profil-get", {
+        headers: {
+          Authorization: `${token}`, 
+        },
+      });
+      
+    console.log(data.message)
+    } catch (error) {
+      window.location = '/login'
+      console.error(error.message);
+    }
+  })();
+</script>
+</body>
+</html>

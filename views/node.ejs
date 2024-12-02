@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Node js Lessons</title>
+    <link rel="icon" type="image/png" href="/images/pngegg.png" />
+    <link rel="stylesheet" href="/stylesheets/lessonsDesign.css">
+</head>
+<body>
+    <footer class="wrap">
+      <div class="footer-content">
+        <div>
+          <div class="logo">
+            <img src="/images/logo.png" width="150px" height="100px" />
+          </div>
+        </div>
+
+        <div class="lessons-div">
+          <div class="lessons">
+            <span class="lessons-title">
+              <img src="/images/webinar.png" width="18px" height="18px" />
+              Lessons
+            </span>
+            <div class="dropdown">
+              <div class="lesson-item"><a href="/html-lesson">HTML</a></div>
+              <div class="lesson-item"><a href="/css-lesson">CSS</a></div>
+              <div class="lesson-item"><a href="/js-lesson">JavaScript</a></div>
+              <div class="lesson-item"><a href="/node-lesson">Node.js</a></div>
+            </div>
+          </div>
+          <div class="menu-div">
+            <span class="menu-item">
+              <img src="/images/document-xxl.png" width="15px" height="15px" />
+              <a href="/web-quizz" class="menu-link">Certificate</a>
+            </span>
+            <span class="menu-item">
+              <img src="/images/settings.png" width="16px" height="16px" />
+              <a href="/settings" class="menu-link">Settings</a>
+            </span>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <br><br>
+
+    <div class="main-container">
+        <div>
+            <div class="video-container">
+                <video controls>
+                    <source src="/videos/node-video.mp4" type="video/mp4" />
+                    <source src="/videos/node-video.ogg" type="video/ogg" />
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="video-container">
+                <video controls>
+                    <source src="/videos/node-video.mp4" type="video/mp4" />
+                    <source src="/videos/node-video.ogg" type="video/ogg" />
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="video-container">
+                <video controls>
+                    <source src="/videos/node-video.mp4" type="video/mp4" />
+                    <source src="/videos/node-video.ogg" type="video/ogg" />
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="video-container">
+                <video controls>
+                    <source src="/videos/node-video.mp4" type="video/mp4" />
+                    <source src="/videos/node-video.ogg" type="video/ogg" />
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+          <div class="video-container">
+                <video controls>
+                    <source src="/videos/node-video.mp4" type="video/mp4" />
+                    <source src="/videos/node-video.ogg" type="video/ogg" />
+                    Your browser does not support the video tag.
+                </video>
+            </div>  
+        </div>
+        <div class="author-container">
+            <div class="author-div">
+                <img src="/images/Zuckerberg_Mark_AIF2019.avif" class="avatar" style="margin-left: 22px;">
+                <p class="video-author">Mark Zuckerberg</p>
+                <span class="author-description" id="author-name">Work Experience:  
+
+Co-founder and CEO, Facebook, Inc.
+Years Active: 2004 - Present  
+Created and developed Facebook, one of the largest social networking platforms in the world.  
+Managed teams of developers to create and implement new features and improvements on the platform.  
+Developed strategies for growth and monetization of the business.
+Co-founder, Thefacebook (original name of Facebook)**  
+Years Active: 2004  
+Developed the initial website and its functionalities, including profile systems and user interactions.
+
+Skills: 
+- Programming languages: PHP, JavaScript, Python, C++.  
+- Experience with frameworks: React, Node.js.  
+- User interface development and UX design.  
+- Leadership qualities and team management experience. Despite all that success, he decided to try his hand at CodeArt.</span>
+           <br>
+                   <h1>Rating Section</h1>
+
+    <div class="rating-container">
+        <button class="rating-btn" data-rating="1" style="font-size:150%;color:yellow;">★</button>
+        <button class="rating-btn" data-rating="2" style="font-size:150%;color:yellow;">★</button>
+        <button class="rating-btn" data-rating="3" style="font-size:150%;color:yellow;">★</button>
+        <button class="rating-btn" data-rating="4" style="font-size:150%;color:yellow;">★</button>
+        <button class="rating-btn" data-rating="5" style="font-size:150%;color:yellow;">★</button>
+    </div>
+    <p class="rating-p"></p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+     <div id="comments">
+    <h1>Comments Section</h1>
+
+    <div id="comment-div">
+        <form id="commentForm" action="/node-lesson" method="POST">
+            <input name="lesson_type" value="node-lesson" id="lesson_type" type="hidden">
+            <div class="smileys">
+                <button type="button" class="smiley-btn" data-smiley="😊">😊</button>
+                <button type="button" class="smiley-btn" data-smiley="😄">😄</button>
+                <button type="button" class="smiley-btn" data-smiley="😢">😢</button>
+                <button type="button" class="smiley-btn" data-smiley="😡">😡</button>
+                <button type="button" class="smiley-btn" data-smiley="😍">😍</button>
+                <button type="button" class="smiley-btn" data-smiley="😜">😜</button>
+                <button type="button" class="smiley-btn" data-smiley="😎">😎</button>
+                <button type="button" class="smiley-btn" data-smiley="🤔">🤔</button>
+                <button type="button" class="smiley-btn" data-smiley="😳">😳</button>
+                <button type="button" class="smiley-btn" data-smiley="👍">👍</button>
+                <button type="button" class="smiley-btn" data-smiley="👎">👎</button>
+                <button type="button" class="smiley-btn" data-smiley="👏">👏</button>
+                <button type="button" class="smiley-btn" data-smiley="✍">✍</button>
+        
+   
+
+            </div>
+            <textarea name="comment" id="commentText" placeholder="Write your comment here..."></textarea>
+            <p class="for-error"></p>
+            <input type="submit" value="Submit" />
+        </form>
+    </div>
+
+    <div class="comment-list" id="commentList">
+        <% if (comments && comments.length > 0) { %>
+            <% comments.forEach(comment => { %>
+            <div class="comment" data-comment-id="<%= comment.id %>"> 
+                <strong class="comment-author"><%= comment.User.username %>:</strong>
+                <p class="comment-text"><%= comment.comments %></p>
+                <div class="data-time">
+                    <p><%= comment.createdAt.getFullYear() %>-</p>
+                    <p><%= comment.createdAt.getMonth() + 1 %>-</p>
+                    <p><%= comment.createdAt.getDate() %></p>
+                </div>
+            </div>
+            <% }) %>
+        <% } else { %>
+            <p>No comments available.</p>
+        <% } %>
+    </div>
+</div>
+
+
+
+
+     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+
+<script>
+    const ratingButtons = document.querySelectorAll('.rating-btn');
+
+    ratingButtons.forEach(button => {
+        button.addEventListener('click', async function() {
+            event.preventDefault();
+            const rating = this.dataset.rating;
+            const lessonType = 'node-lesson'; 
+
+            try {
+                const response = await axios.post('/rate', {
+                    rating,
+                    lesson_type: lessonType
+                }, {
+                    headers: {
+                        "Content-Type": "application/json",
+                        Authorization: "Bearer " + localStorage.getItem("token"),
+                    },
+                });
+
+                if (response.status === 201) {
+                   const p =  document.querySelector(".rating-p");
+                   p.style.color = "limegreen"
+                   p.innerHTML = "You successfully send review"
+                   
+                   setTimeout(() => {
+                     p.innerHTML = ""
+                   }, 3000);
+        
+                }
+            } catch (error) {
+                console.error("Ошибка при отправке оценки:", error);
+                const p =  document.querySelector(".rating-p");
+                p.style.color = "red"
+                p.innerHTML = "You have already sent review";
+                setTimeout(() => {
+                     p.innerHTML = ""
+                   }, 3000);
+        
+            }
+        });
+    });
+
+
+const smileyButtons = document.querySelectorAll('.smiley-btn');
+
+smileyButtons.forEach(button => {
+    button.addEventListener('click', function() {
+        const smiley = this.dataset.smiley;
+        const commentInput = document.getElementById("commentText");
+        commentInput.value += smiley; 
+        commentInput.focus(); 
+    });
+});
+
+    document.getElementById("commentForm").addEventListener("submit", async function (event) {
+        event.preventDefault();
+        const commentInput = document.getElementById("commentText");
+        const comment = commentInput.value;
+        const lessonType = document.querySelector('#lesson_type').value;
+        
+        if(comment.trim() === ""){
+            const text = document.querySelector(".for-error");
+            text.style.textAlign = "center";
+            text.innerHTML = "Comments is undifined"
+
+            setInterval(() => {
+            text.innerHTML = ""
+            },3000);
+            return
+        } 
+        const token = localStorage.getItem("token")
+        try {
+            const response = await axios.post(
+                "/node-lesson",
+                {
+                    comment,
+                    lesson_type: lessonType,                },
+                {
+                    headers: {
+                        "Content-Type": "application/json",
+                        Authorization: token,
+                    },
+                },
+            );
+            if (response.status === 201) {
+                location.reload();
+            }
+        } catch (error) {
+            if (error.response) {
+                console.error(error.response.data.error);
+                alert("you dont have token")
+            } else {
+                console.error("Error:", error.message);
+            }
+        }
+        commentInput.value = "";
+    });
+</script>
+</body>
+</html>
+</body>
+</html>

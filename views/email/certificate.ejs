@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Certificate of Completion</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #e0f7fa; /* Light aqua background */
+            font-family: 'Arial', sans-serif;
+        }
+
+        .certificate {
+            position: relative;
+            border: 5px solid #4CAF50; /* Green border */
+            padding: 20px;
+            background-color: white;
+            text-align: center;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            border-radius: 15px; /* Rounded corners */
+            width: 80%;
+            max-width: 600px; /* Maximum width for certificate */
+            overflow: hidden; /* Hide overflow for patterns */
+        }
+
+        .certificate::before {
+            content: '';
+            position: absolute;
+            top: -30px;
+            left: -30px;
+            right: -30px;
+            bottom: -30px;
+            background-image: url('https://www.transparenttextures.com/patterns/paper.png'); /* Background pattern */
+            opacity: 0.2; /* Make it subtle */
+            z-index: 0; /* Behind the content */
+            border-radius: 15px; /* Match border radius */
+        }
+
+        h1 {
+            color: #4CAF50; /* Title color */
+            margin-top: 0; /* Remove margin */
+            font-size: 2.5em; /* Increase font size */
+            z-index: 1; /* Ensure it stays above background */
+        }
+
+        h2 {
+            color: #3f51b5; /* Darker color for name */
+            font-size: 2em; /* Increase font size */
+            margin: 10px 0; /* Add some margin */
+            z-index: 1; /* Ensure it stays above background */
+        }
+
+        h3 {
+            color: #2196f3; /* Blue color for course */
+            font-size: 1.5em; /* Increase font size */
+            margin: 10px 0; /* Add some margin */
+            z-index: 1; /* Ensure it stays above background */
+        }
+
+        .signature {
+            margin-top: 50px;
+            z-index: 1; /* Ensure it stays above background */
+        }
+
+        .signature img {
+            width: 100px; /* Set width for signature image */
+            height: auto; /* Maintain aspect ratio */
+        }
+
+        .signature p {
+            margin: 5px 0; /* Add some margin */
+            font-style: italic; /* Italicize signature */
+        }
+
+        p {
+            color: #555; /* Dark gray color for text */
+            font-size: 1.2em; /* Slightly larger font for readability */
+            margin: 10px 0; /* Add some margin */
+            z-index: 1; /* Ensure it stays above background */
+        }
+    </style>
+</head>
+<body>
+    <div class="certificate">
+        <h1>Certificate of Completion</h1>
+        <p>This certifies that</p>
+        <h2><%= fname %> <%= lname %> 🥇</h2>
+        <p>has successfully completed the ✍</p>
+        <h3>Web Development 💻 in CodeArt Academy</h3>
+        <p>on this day, <%= new Date().toLocaleDateString() %>.</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forgot Email</title>
+    <link rel="stylesheet" href="/stylesheets/forgotEmail.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Forgot Email</h2>
+      <form id="forgotEmailForm" action="forgot-email" method="POST">
+        <input
+          id="username"
+          type="text"
+          name="username"
+          placeholder="Username"
+          required
+        />
+        <input
+          id="email"
+          type="email"
+          name="email"
+          placeholder="Email"
+          required
+        />
+        <input
+          id="password"
+          type="password"
+          name="password"
+          placeholder="Password"
+          required
+        />
+        <input type="submit" value="Submit" />
+        <div id="message" class="error"></div>
+      </form>
+      <div class="footer">
+        <p>&copy; CodeArt</p>
+      </div>
+    </div>
+    <script src="/javascripts/forgotEmail"></script>
+  </body>
+</html>

@@ -1,0 +1,52 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Change Email</title>
+    <link rel="stylesheet" href="/stylesheets/changeEmail.ejs">
+  </head>
+  <body>
+    <div class="container">
+      <form id="changeEmailForm" action="/change-email" method="POST">
+        <h2>Change Email</h2>
+        <input
+          type="text"
+          id="username"
+          name="username"
+          placeholder="Username"
+          required
+        />
+
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="New Email"
+          required
+        />
+
+        <input
+          type="password"
+          id="password"
+          name="password"
+          placeholder="Password"
+          required
+        />
+
+        <input
+          type="text"
+          id="verify_code"
+          name="verify_code"
+          placeholder="Verification Code"
+          required
+        />
+
+        <input type="submit" value="Change Email" />
+        <div id="error-message" class="error" style="display: none"></div>
+      </form>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="/javascripts/changeEmail.js"></script>
+  </body>
+</html>
+  

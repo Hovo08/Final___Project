@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Development Quiz</title>
+    <link rel="icon" type="image/png" href="/images/free-icon-question-8624558.png" />
+    <link rel="stylesheet" href="/stylesheets/quizz.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Web Development Quiz</h1>
+      <form action="/web-quizz" method="POST">
+        <% questions.forEach((q, index) => { %>
+        <div class="question">
+          <p><%= q.question %></p>
+          <ul class="options">
+            <% q.options.forEach(option => { %>
+            <li>
+              <input
+                type="radio"
+                name="answers[<%= index %>]"
+                value="<%= option %>"
+              />
+              <%= option %>
+            </li>
+            <% }) %>
+          </ul>
+        </div>
+        <% }) %>
+        <button type="submit">Check Answers</button>
+      </form>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+      const token = localStorage.getItem("token");
+      (async () => {
+        try {
+          const { data } = await axios.get("/get-quizz", {
+            headers: {
+              Authorization: `${token}`,
+            },
+          });
+
+          console.log(data.message);
+        } catch (error) {
+          window.location = "/login";
+          console.error(error.message);
+        }
+      })();
+    </script>
+  </body>
+</html>

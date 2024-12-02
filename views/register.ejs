@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="icon" type="image/png" href="/images/register.png" />
+    <link rel="stylesheet" href="/stylesheets/register.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Register</h1>
+      <form id="registerForm">
+        <div class="input-group">
+          <input
+            id="username"
+            type="text"
+            name="username"
+            placeholder="Username"
+            
+          />
+        </div>
+        <div class="input-group">
+          <input
+            id="email"
+            type="email"
+            name="email"
+            placeholder="Email"
+            
+          />
+        </div>
+        <div class="input-group">
+          <input
+            id="password"
+            type="password"
+            name="password"
+            placeholder="Password"
+            
+          />
+        </div>
+        <input type="submit" value="Register" class="btn" />
+        <br />
+        <br />
+        <a href="/login" class="a-tag">Login</a>
+        <p class="error-message" id="error-message"></p>
+      </form>
+    </div>
+    <script src="/javascripts/register.js"></script>
+  </body>
+</html>
